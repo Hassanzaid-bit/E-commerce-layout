@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
+    line-height: 1.33;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .wrapper {
     display: grid;
@@ -12,18 +26,106 @@
 
 .top-nav {
     grid-column: col-start / span 12;
-    height: 100px;
-    background: cadetblue;
+    height: auto;
+    background: #ffffff;
     position: fixed;
     top: 0;
     overflow: hidden;
     width: 100%;
+
 }
+
+.inside-nav {
+    width: 85%;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    background: #ffffff;
+    width: auto;
+    height: auto;  
+}
+.logo h1 {
+    font-size: 32.9px;
+    color: #4A6364;
+}
+.logo .phile {
+    color: #fd9900;
+}
+
+.top-nav .right-side {
+    position: relative;
+    right: 84px;
+    width: auto;
+    height: auto;
+}
+
+.right-side input {
+    height: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 230px;
+    bottom: 1px;
+    width: 38px;
+    height: 38px;
+    background:#fd9900 ;
+}
+.search-icon img {
+    width: 28px;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    color: #ffffff;
+}
+
+.cart {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    left: 271px;
+    bottom: 1px;
+}
+
+.main-nav {
+    background: #476462;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+} 
+
+.main-nav ul li {
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 8px;
+    cursor: pointer;
+    letter-spacing: 0.25px;
+}
+
+.main-nav ul li:hover {
+    background: gainsboro;
+}
+
 
 .hero {
     grid-column: col-start / span 12;
-    height: 480px;
-    background: chocolate;
+    height: 600px;
+    background: url(/michal-kubalczyk-WecngmAT-KY-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .products {
@@ -40,6 +142,15 @@
 .computers {   
     height: 315px;
     background: darkmagenta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.computers img {
+    width: 420px;
+    height: 254px;
 }
 
 .components { 
