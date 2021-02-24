@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
     line-height: 1.33;
+    outline: none;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: #001433;
+    background-color:#fafafa;;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -52,50 +60,48 @@ h1, h2, h3, h4, h5, h6{
     height: auto;  
 }
 .logo h1 {
-    font-size: 32.9px;
-    color: #4A6364;
+    font-size: 2rem;
+    color: #001433;
 }
 .logo .phile {
     color: #fd9900;
 }
 
 .top-nav .right-side {
-    position: relative;
-    right: 84px;
     width: auto;
     height: auto;
+    display: flex;
+
 }
 
 .right-side input {
-    height: 40px;
+    height: 2rem;
+    padding: 1rem;
+    color: #001433;
 }
 
 .search-icon {
-    position: absolute;
-    left: 230px;
-    bottom: 1px;
-    width: 38px;
-    height: 38px;
-    background:#fd9900 ;
+    background:#fd9900; 
+    width: 2rem;
+    height: 2.2rem;
+    border-radius: 0.2rem;
+    position: relative;
 }
 .search-icon img {
-    width: 28px;
-    position: relative;
-    top: 6px;
-    left: 6px;
-    color: #ffffff;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.3rem;
 }
 
-.cart {
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    left: 271px;
-    bottom: 1px;
+.cart img {
+    width: 2rem;
+    position: relative;
+    top: 0.2rem;
+    left: 0.2rem;
 }
 
 .main-nav {
-    background: #476462;
+    background: #001433;
     height: auto;
     display: flex;
     justify-content: center;
@@ -116,18 +122,36 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
     letter-spacing: 0.25px;
 }
-
-.main-nav ul li:hover {
-    background: gainsboro;
-}
-
-
 .hero {
     grid-column: col-start / span 12;
     height: 600px;
-    background: url(/michal-kubalczyk-WecngmAT-KY-unsplash.jpg);
+    background: url(/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.value-proposition {
+    position: relative;
+    top: 12rem;
+    left: 12rem;
+    width: 48ch;
+}
+
+.value-proposition h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.2;
+}
+.value-proposition button {
+    background-color: #fd9900;
+    color: #001433;
+    line-height: 120%;
+    height: 56px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    top: 1.5rem;
 }
 
 .products {
@@ -143,7 +167,7 @@ h1, h2, h3, h4, h5, h6{
 
 .computers, .components {   
     height: 20rem;
-    background: #fffbf5;
+    background: #ffffff;
     display: flex;
     justify-content: center;
    
@@ -159,6 +183,7 @@ h1, h2, h3, h4, h5, h6{
 .products-flex h3 {
    color: #331f00;
    font-size: 1.2rem;
+   font-weight: 500;
 }
 
 .products-flex a {
@@ -171,12 +196,31 @@ h1, h2, h3, h4, h5, h6{
    height: 80%;
 }
 
-
-
 .products .signup {
     height: 315px;
-    background:red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+.products .signup h2 {
+    font-size: 1.9rem;
+}
+.best {
+    font-size: 1.9rem;
+    color: #fd9900;
+}
+.products .signup button {
+    background-color: #fd9900;
+    color: #001433;
+    line-height: 120%;
+    height: 56px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 4px;
+    margin-right: auto;
+}
+
 
 .recomended-products {
     grid-column: col-start 2 / span 10;
@@ -189,11 +233,8 @@ h1, h2, h3, h4, h5, h6{
     row-gap: 3rem;
     align-content: center;
     padding: 0 1rem;
-
     overflow-x: scroll;
     scroll-snap-type: x proximity;
-   
-
 }
 
 
@@ -208,27 +249,59 @@ h1, h2, h3, h4, h5, h6{
     top: 6px;
     font-size: 1.5rem;
     z-index: 3;
+    font-weight: 500;
 }
 
 .item1 {
     grid-row: 2;
     height: 330px;
-    color: #331f00;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
 }
- .item1 img {
+.item1 > div {
+    cursor: pointer;
+}
+.item1 img {
      width: 14rem;
+ }
+
+.item1 .star-ratings {
+     color: #fd9900;
  }
 
 
 .footer {
     grid-column: col-start / span 12;
-    height: 100px;
-    background: #476462;
+    height: 200px;
+    background: #001433;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    position: relative;
 }
+.footer li {
+    font-size: 0.8rem;
+}
+.footer-name {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    position: absolute;
+    top: 128px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+.bottom-area {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
 
 /************* Product's Page **************/
 
