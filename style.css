@@ -25,6 +25,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 
 .wrapper {
     display: grid;
@@ -122,6 +127,119 @@ ul {
     cursor: pointer;
     letter-spacing: 0.25px;
 }
+
+.mainlist-nav {
+    position: relative;
+
+}
+.mainlist-nav li {
+    transition-duration: 0.5s;
+}
+ul li .dropdown {
+    list-style: none;
+    visibility: hidden;
+    position: fixed; 
+    left: 15rem;
+    background-color: #ffffff;
+    width: auto;
+    text-transform: capitalize;
+    color: #001433;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    display: none;
+
+    
+}
+
+.dropdown .desktop-list {
+    display: flex;
+    flex-direction: column;
+    color:#001433;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 0.4;
+    text-align: -webkit-center;
+    
+}
+.dropdown .laptops-list {
+    display: flex;
+    flex-direction: column;
+    color:#001433;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 0.4;
+    text-align: -webkit-center;
+   
+}
+.desktop-list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.desktop-list ul li {
+    color:#001433;
+    padding-left: 0;
+    padding-bottom: 0rem;
+    padding-top: 0.4rem;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.laptops-list ul li {
+    color: #001433;
+    padding-left: 0;
+    padding-bottom: 0rem;
+    padding-top: 0.4rem;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.desktop-list ul li:nth-child(1){
+    padding-top: 0.7rem;
+}
+.laptops-list ul li:nth-child(1){
+    padding-top: 0.7rem;
+}
+
+.laptops-list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-transform: capitalize;
+}
+.components-list .components-dropdown {
+    display: flex;
+    align-items: center;
+    width: 12rem;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: fixed;
+    display: none;
+    padding: 1rem;
+}
+.components-list .components-dropdown li {
+    color:  #001433;
+    padding-left: 0;
+    padding-bottom: 0rem;
+    padding-top: 0.4rem;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+
+ul li.comp-systems:hover > ul.dropdown,
+ul li:hover {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  top: 8rem;
+}
+ul li.components-list:hover > ul.components-dropdown,
+ul li:hover {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    top: 8rem; 
+}
+
 .hero {
     grid-column: col-start / span 12;
     height: 600px;
